@@ -22,8 +22,6 @@ public class OptionalFeature {
 	}
 
 	private static void getGraphicsCardSize(SmartPhone smartPhone) {
-		List a = new ArrayList<>();
-		a.stream();
 		String size = smartPhone.getGraphicsCard() 
 							 .map(GraphicsCard::getGraphicsMemory) // map returns the Optional of type passed as a parameter (here its string)
 							 .map(GraphicsMemory::getDedicatedMemory)
@@ -43,7 +41,8 @@ public class OptionalFeature {
 
 	private static SmartPhone createSmartPhoneWithGraphicsCard() {
 		SmartPhone smartPhone = new SmartPhone();
-		Optional<GraphicsCard> card = Optional.ofNullable(new GraphicsCard("4 gb"));
+		GraphicsMemory memory = new GraphicsMemory("4 GB", "");
+		Optional<GraphicsCard> card = Optional.ofNullable(new GraphicsCard("4 gb", memory));
 		smartPhone.setGraphicsCard(card);
 		return smartPhone;
 	}

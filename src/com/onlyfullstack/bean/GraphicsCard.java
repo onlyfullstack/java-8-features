@@ -5,8 +5,11 @@ public class GraphicsCard {
 	private String size;
 	private GraphicsMemory graphicsMemory;
 
-	public GraphicsCard(String size) {
+
+	public GraphicsCard(String size, GraphicsMemory graphicsMemory) {
+		super();
 		this.size = size;
+		this.graphicsMemory = graphicsMemory;
 	}
 
 	public GraphicsMemory getGraphicsMemory() {

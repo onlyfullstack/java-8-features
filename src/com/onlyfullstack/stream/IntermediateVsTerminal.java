@@ -16,12 +16,11 @@ public class IntermediateVsTerminal {
 
 	private static void lazyIntermediateOperations(List<Student> students) throws InterruptedException {
 		System.out.println("######## Executing lazyIntermediateOperations() : ######## ");
-		Stream<String> studentStream = students.stream()
-												.map(student -> {
-													System.out.printf("In Map : %s\n", student.getName());
-													return student.getName().toUpperCase();
-												});
-		
+		Stream<String> studentStream = students.stream().map(student -> {
+			System.out.printf("In Map : %s\n", student.getName());
+			return student.getName().toUpperCase();
+		});
+
 		System.out.println("After map statement");
 		Thread.sleep(5000);
 		System.out.println("Thread is in Running state now");
