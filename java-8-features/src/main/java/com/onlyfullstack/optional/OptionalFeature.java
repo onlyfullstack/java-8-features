@@ -1,13 +1,6 @@
 package com.onlyfullstack.optional;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.LinkedHashSet;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Optional;
-import java.util.PriorityQueue;
 
 import com.onlyfullstack.bean.GraphicsCard;
 import com.onlyfullstack.bean.GraphicsMemory;
